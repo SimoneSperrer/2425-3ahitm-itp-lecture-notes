@@ -8,8 +8,8 @@ ifndef::imagesdir[:imagesdir: images]
 :toc:
 ifdef::backend-html5[]
 // https://fontawesome.com/v4.7.0/icons/
-icon:file-text-o[link=https://github.com/2324-4bhif-wmc/2324-4bhif-wmc-lecture-notes/main/asciidocs/{docname}.adoc] ‏ ‏ ‎
-icon:github-square[link=https://github.com/2324-4bhif-wmc/2324-4bhif-wmc-lecture-notes] ‏ ‏ ‎
+icon:file-text-o[link=https://github.com/2425-3ahitm-itp/2425-3ahitm-itp-lecture-notes/blob/main/asciidocs/docs/{docname}.adoc] ‏ ‏ ‎
+icon:github-square[link=https://github.com/2425-3ahitm-itp/2425-3ahitm-itp-lecture-notes] ‏ ‏ ‎
 icon:home[link=http://edufs.edu.htl-leonding.ac.at/~t.stuetz/hugo/2021/01/lecture-notes/]
 endif::backend-html5[]
 
