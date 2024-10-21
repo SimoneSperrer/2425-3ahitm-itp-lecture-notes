@@ -137,5 +137,5 @@ image::scrum-team.png[]
 image::notes/ITP_08102024.pdf[]
 
 link:notes/ITP_08102024.pdf[Mitschrift]
-
-<<notes/ITP_08102024.pdf#,pdf>>
+[.pdf]
+<<notes/ITP_08102024.pdf#,Mitschrift>>
