@@ -13,6 +13,18 @@ icon:github-square[link=https://github.com/2425-3ahitm-itp/2425-3ahitm-itp-lectu
 icon:home[link=http://edufs.edu.htl-leonding.ac.at/~t.stuetz/hugo/2021/01/lecture-notes/]
 endif::backend-html5[]
 
+== Mitschriften
+
+
+link:notes/ITP_08-10-2024.pdf[Mitschrift vom 08.10.2024 (Simone Sperrer)]
+
+link:notes/ITP_21-10-2024.pdf[Mitschrift vom 21.10.2024 (Simone Sperrer)]
+
+link:notes/ITP_22-10-2024.pdf[Mitschrift vom 22.10.2024 (Simone Sperrer)]
+
+
+
+
 == 2024-10-01
 
 * Mehic: IoT/HA - Alarmierung für ältere PErsonen
@@ -131,15 +143,5 @@ image::minimum-viable-product.png[]
 image::scrum-team.png[]
 
 
-
-
-
-image::notes/ITP_08102024.pdf[]
-
-link:notes/ITP_08102024.pdf[Mitschrift, window="_blank"]
-link:notes/ITP_08102024.pdf[Mitschrift]
-
-[.pdf]
-<<notes/ITP_08102024.pdf#,Mitschrift>>
 
 
