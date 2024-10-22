@@ -130,3 +130,46 @@ image::minimum-viable-product.png[]
 
 image::scrum-team.png[]
 
+== 2024-10-21
+
+=== Kreativitätstechniken
+
+=== Stakeholder
+
+* Betroffener
+
+=== Projektziele
+
+image::projektziele.png[]
+
+* Operationalisieren: Einen abstrakten Begriff so in Teile zu zerlegen, die in Zahlen ausgedrückt werden können
+
+** Bsp: Wohlfühlen in einem Betrieb
+*** Fluktuationsrate (Anzahl der Kündigungen in einem Zeitabschnitt)
+*** Krankenstandstage
+*** ...
+
+* Was ist Qualität? -> Was der Kunde wünscht?
+
+=== Projektabgrenzung (sachlich, zeitlich sozial)
+
+
+== 2024-10-22
+
+=== Docker
+
+* *Virtualisierung* bezeichnet in der Informatik die Nachbildung eines Hard- oder Software-Objekts durch ein ähnliches Objekt vom selben Typ mit Hilfe einer Abstraktionsschicht. Dadurch lassen sich virtuelle (d. h. nicht-physische) Geräte oder Dienste wie emulierte Hardware, Betriebssysteme, Datenspeicher oder Netzwerkressourcen erzeugen. Dies erlaubt es etwa, Computer-Ressourcen (insbesondere im Server-Bereich) transparent zusammenzufassen oder aufzuteilen, oder ein Betriebssystem innerhalb eines anderen auszuführen. Dadurch können u. a. mehrere Betriebssysteme auf einem physischen Server oder „Host“ ausgeführt werden.[wikipedia]
+
+image::docker-volumes.png[]
+
+
+
+
+
+
+
+
+
+
+
+
