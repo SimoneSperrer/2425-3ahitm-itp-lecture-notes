@@ -237,6 +237,67 @@ image::github-flow.png[]
 
 
 
+== 2024-11-19
+
+image::effektivitaet-effizienz.png[]
+
+
+=== Anforderungserhebung (Buch)
+
+==== Interview
+==== Beobachtung
+==== Fragebogen
+==== Dokumentenanalyse
+
+=== Pflichtenheft (Buch)
+
+image::v-modell.png[]
+
+* Übung: Für Projekte ein Pflichtenheft im asciidoc - Format erstellen
+
+
+=== Docker-Wiederholung
+
+==== Image
+==== Container
+==== Volume
+
+* Bits and Bytes, die man schreiben und lessen kann (-> File)
+
+* 2 Arten von Volumes:
+** bind mount
+** volume
+
+==== BuildContext
+
+* Der Docker Build Context ist der Satz von Dateien, die Docker benötigt, um ein Docker-Image zu erstellen. Wenn Sie den Befehl docker build ausführen, übergeben Sie Docker einen Pfad zu einem Verzeichnis als Build Context. Docker sendet dann den Inhalt dieses Verzeichnisses (rekursiv) an den Docker-Daemon.
+
+* Der Build Context enthält typischerweise die Dockerfile und alle Dateien, die in der Dockerfile referenziert werden, wie z.B. Quellcode, Konfigurationsdateien und Abhängigkeiten.
++
+.Beispiel:
+----
+docker build -t my-image:latest .
+----
+
+ * In diesem Beispiel ist der aktuelle Verzeichnis (.) der Build Context. Docker wird alle Dateien und Unterverzeichnisse im aktuellen Verzeichnis an den Docker-Daemon senden, um das Image zu erstellen.
+
+==== mount
+
+* ein Volume wird gemountet
+
+==== Registry
+
+==== Dockerfile
+
+==== port
+
+
+
+
+
+
+
+
 
 
 
