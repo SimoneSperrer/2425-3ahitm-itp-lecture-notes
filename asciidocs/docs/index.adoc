@@ -279,7 +279,7 @@ image::v-modell.png[]
 docker build -t my-image:latest .
 ----
 
- * In diesem Beispiel ist der aktuelle Verzeichnis (.) der Build Context. Docker wird alle Dateien und Unterverzeichnisse im aktuellen Verzeichnis an den Docker-Daemon senden, um das Image zu erstellen.
+ * In diesem Beispiel ist das aktuelle Verzeichnis (.) der Build Context. Docker wird alle Dateien und Unterverzeichnisse im aktuellen Verzeichnis an den Docker-Daemon senden, um das Image zu erstellen.
 
 ==== mount
 
