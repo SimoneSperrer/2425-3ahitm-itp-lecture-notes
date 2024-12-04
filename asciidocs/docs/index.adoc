@@ -291,9 +291,16 @@ docker build -t my-image:latest .
 
 ==== port
 
+=== docker compose
 
+* One Service - one docker container
 
+== 2024-12-04
 
+=== Package-by-Feature
+
+.source: https://medium.com/sahibinden-technology/package-by-layer-vs-package-by-feature-7e89cde2ae3a[^]
+image::package-by-feature.png[]
 
 
 
