@@ -302,6 +302,39 @@ docker build -t my-image:latest .
 .source: https://medium.com/sahibinden-technology/package-by-layer-vs-package-by-feature-7e89cde2ae3a[^]
 image::package-by-feature.png[]
 
+== 2024-12-17
+=== Beziehungen - Assoziation
+
+* Die Assoziation zwischen einem Akteur und einem Anwendungsfall wird durch eine einfache Linie dargestellt. Diese Linie symbolisiert die Interaktion, jedoch keine Datenflussrichtung.
+* Beispiel:
+** Ein Benutzer interagiert mit einem System, z. B. ein Kunde führt eine Bestellung durch.
+
+=== Use case
+
+* Ein Beispiel für einen Use Case:
+** Ein Kunde kauft ein Auto.
+* Grund:
+** Der Kunde benötigt ein Transportmittel, um Güter von A nach B zu befördern.
+
+=== includes vs extends
+
+* *extends*
+** Wird verwendet, wenn ein Anwendungsfall optional erweitert werden kann. Beispiel: 'Registrierung abschließen' kann optional 'Gutschein anwenden' erweitern.
+* *include*
+** Wird verwendet, wenn ein Anwendungsfall zwingend einen anderen Anwendungsfall beinhaltet, um korrekt zu funktionieren. Beispiel: 'Zahlung verarbeiten' beinhaltet zwingend 'Rechnungsdetails prüfen'.
+
+=== Zustandsmaschine
+* Eine Zustandsmaschine zeigt die verschiedenen Zustände eines Objekts und die möglichen Übergänge zwischen diesen Zuständen.
+* Ein Fußballspiel kann mehrere Zustände haben
+** In Vorbereitung - Startzustand, z.B. Mannschaften werden aufgestellt.
+** Ablauf - Das Spiel wird gespielt.
+** Abbruch - Das Spiel wird vorzeitig beendet.
+** Pause - Halbzeitpause
+** Abschluss - Endzustand, z.B.Spielende
+
+
+
+
 
 
 
