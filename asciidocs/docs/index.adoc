@@ -169,6 +169,12 @@ image::docker-volumes.png[]
 
 === Git Branching Strategy
 
+== Git branching strategy
+=== Was ist ein git branch?
+* Ein Git-Branch ist eine unabhängige Version eines Repositories, die es ermöglicht, an neuen Features oder Fixes zu arbeiten, ohne den Hauptcode (meistens im `master`- oder `main`-Branch) zu stören. Nach Abschluss der Arbeiten kann der Branch zurück in den Hauptbranch gemergt werden, um die Änderungen zu integrieren.
+
+
+
 * https://brntn.me/blog/git-branching-strategy-diagrams/[Git branching strategy diagrams^]
 
 
@@ -255,6 +261,68 @@ image::v-modell.png[]
 
 * Übung: Für Projekte ein Pflichtenheft im asciidoc - Format erstellen
 
+
+=== Docker-Grundlagen
+
+=== *Was ist Docker?*
+
+* Eine Technologie , um eine Application und alle ihre Abhängigkeiten in einen einzelnen , leicht zu transportierenden Container zu packen.
+* Wird eine Applikation in einem Docker-Container gepackt, so ist sichergestellt , dass die Laufzeitumgebung unverändert bleibt, auch wenn der Container auf einem anderen Hostsystem läuft.
+
+=== *Wie funktioniert Docker?*
+
+image::image-2024-12-14-00-53-54-579.png[]
+
+* *Dockerfile*: Dies ist eine Textdatei, die Anweisungen enthält , um ein Docker-Image zu erstellen.(Kochrezept zum Erstellen des Images).
+* *docker build*:
+** Mit diesem Befehl wird aus dem Dockerfile ein Docker-Image erstellt. Dieses Image hat alle notwendigen Datien und Abhängigkeiten , um eine Anwendung auszuführen.
+[source,terminal]
+----
+docker build
+----
+* *Docker Registry*: Bibliothek oder Lager , wo Docker-Images gespeichert und verwaltet werden.
+
+* *docker pull*: Man holt sich mit diesem Befehl ein Docker-Image aus der Docker-Registry.(herunterladen oder pullen)
+
+[source,terminal]
+----
+docker pull
+----
+
+* *docker run*: Mit docker run wird aus dem Docker Image ein Docker Container gestartet.
+Ein Docker Container ist die laufende Instanz eines Docker Images.
+
+[source,terminal]
+----
+docker run
+----
+
+=== Leichtgewichtige Virtualisierung VS Schwergewichtige Virtualisierung
+|===
+|Leichtgewichtige Virtualisierung | Schwergewichtige Virtualisierung
+|Die beiden OS sind nicht unabhängig und müssen den selben Kernel benutzen.
+z.b Linux/Linux, verlangt aber weniger Ressourcenutzung.
+
+Beispiele: Docker,Podman
+| Die beiden OS sind völlig unabhängig und können verschieden sein.
+
+Beispiele: Virtual Box, vmWare
+
+|===
+
+
+image::image-2024-12-14-01-03-56-506.png[]
+
+=== Docker Registries
+* ist ein Remote-Repository zum Abspeichern von Docker Images
+* kann privat und öffentlich(public) sein
+
+=== Docker Image
+* Ein Docker Image enthält alle notwendigen Dateien, Einstellungen und Abhängigkeiten , um eine Anwendung auszuführen.
+
+
+=== Docker Container
+* Ein Docker Container ist die laufende Instanz von einem Docker Image und wird mit docker run erstellt
 
 === Docker-Wiederholung
 
