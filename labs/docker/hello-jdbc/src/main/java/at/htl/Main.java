@@ -10,8 +10,14 @@ import java.sql.Statement;
 public class Main {
     public static void main(String[] args) {
 
+//        try (Connection conn = DriverManager.getConnection(
+//                "jdbc:h2:tcp://localhost/db",
+//                "app",
+//                "app");
+//             Statement stmt = conn.createStatement()
+//        ) {
         try (Connection conn = DriverManager.getConnection(
-                "jdbc:h2:tcp://localhost/db",
+                "jdbc:postgresql://localhost/db",
                 "app",
                 "app");
              Statement stmt = conn.createStatement()

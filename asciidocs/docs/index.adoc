@@ -303,7 +303,9 @@ docker build -t my-image:latest .
 image::package-by-feature.png[]
 
 
+== 2025-01-14
 
+* CLD bereits erläutert
 
 
 

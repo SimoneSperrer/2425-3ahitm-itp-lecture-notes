@@ -1,6 +1,6 @@
 services:
 
-  db:
+  postgres:
     container_name: postgres
     image: postgres:latest
     environment:
