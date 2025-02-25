@@ -303,11 +303,98 @@ docker build -t my-image:latest .
 image::package-by-feature.png[]
 
 
-== 2025-01-14
+== 2025-01-14 Use-Cases
 
 * CLD bereits erläutert
 
 * Anwendungsfalldiagramme bis Folie 12
+
+== 2025-02-04
+
+* https://dev.to/ladoxer/why-i-stopped-using-plain-git-pull-and-why-you-should-too-2anl?utm_medium=erik.in&utm_source=bluesky[Why I Stopped Using Plain Git Pull (And Why You Should Too)^]
+
+=== Entwurfsentscheidungen
+
+==== Schritt 1: Erarbeiten des Zielsystems
+* Was ist mir wichtig?
+
+* Bsp: Auswahl einer Datenbank für Ermittlung eines Produkts zu einem gewissen EAN-Code
+
+** kostenfrei
+** Zugriff über API möglich
+** keine Zugriffsbeschränkungen (möglichst viele Anfragen pro Tag)
+** möglichst viele Produkte sollen enthalten sein
+** ev. Eintragen eigener (neuer) Produkte
+
+==== Schritt 2: Recherche für möglich Optionen (in unserm Bsp Datenbanken)
+
+* https://opengtindb.org/
+* https://www.ean-search.org/ean-database-api.html
+* ...
+
+==== Schritt 3: Bewertung der Optionen
+
+
+|===
+|Alternativen | ist kostenfrei | Zugriff über API |viele Produkte verfügbar | Entscheidung
+
+|opengtindb
+| ja
+| ja
+| hoffentlich
+| X
+
+|ean-search
+| nein
+| ja
+| k.A.
+|
+
+|===
+
+
+=== Paper CSS
+
+* https://www.getpapercss.com/
+
+
+== 2025-02-11
+
+image::disjunkt-ueberlappend.png[]
+
+
+== 2025-02-25 Docker
+
+=== nginx mit Docker
+
+* Aufgabenstellung: ein nginx-Image mittels Docker starten.
+
+** Wenn http://localhost:8080 dann "Hallo <Vorname> <Nachname>"
+
+----
+docker image ls
+
+docker pull nginx
+
+docker run --name nginx \
+           -v $PWD/www-data:/usr/share/nginx/html:ro \
+           -p 8080:80 \
+           -d nginx:1.27-alpine
+
+docker container stop nginx && docker container rm nginx
+----
+
+IMPORTANT: Nur der root user darf Ports unter 1000 verwenden, daher verwenden wir 8080
+
+
+=== Semantische Versionierung vs Kalendarische Versionierung
+
+* https://semver.org/
+
+* https://nehckl0.medium.com/semver-and-calver-2-popular-software-versioning-schemes-96be80efe36
+
+
+
 
 
 
