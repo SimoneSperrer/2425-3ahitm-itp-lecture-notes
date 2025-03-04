@@ -143,5 +143,370 @@ image::minimum-viable-product.png[]
 image::scrum-team.png[]
 
 
+== 2024-10-21
+
+=== Kreativitätstechniken
+
+=== Stakeholder
+
+* Betroffener
+
+=== Projektziele
+
+image::projektziele.png[]
+
+* Operationalisieren: Einen abstrakten Begriff so in Teile zu zerlegen, die in Zahlen ausgedrückt werden können
+
+** Bsp: Wohlfühlen in einem Betrieb
+*** Fluktuationsrate (Anzahl der Kündigungen in einem Zeitabschnitt)
+*** Krankenstandstage
+*** ...
+
+* Was ist Qualität? -> Was der Kunde wünscht?
+
+=== Projektabgrenzung (sachlich, zeitlich sozial)
+
+
+== 2024-10-22
+
+=== Docker
+
+* *Virtualisierung* bezeichnet in der Informatik die Nachbildung eines Hard- oder Software-Objekts durch ein ähnliches Objekt vom selben Typ mit Hilfe einer Abstraktionsschicht. Dadurch lassen sich virtuelle (d. h. nicht-physische) Geräte oder Dienste wie emulierte Hardware, Betriebssysteme, Datenspeicher oder Netzwerkressourcen erzeugen. Dies erlaubt es etwa, Computer-Ressourcen (insbesondere im Server-Bereich) transparent zusammenzufassen oder aufzuteilen, oder ein Betriebssystem innerhalb eines anderen auszuführen. Dadurch können u. a. mehrere Betriebssysteme auf einem physischen Server oder „Host“ ausgeführt werden.[wikipedia]
+
+image::docker-volumes.png[]
+
+
+== 2024-11-04
+
+== 2024-11-11
+
+=== Git Branching Strategy
+
+== Git branching strategy
+=== Was ist ein git branch?
+* Ein Git-Branch ist eine unabhängige Version eines Repositories, die es ermöglicht, an neuen Features oder Fixes zu arbeiten, ohne den Hauptcode (meistens im `master`- oder `main`-Branch) zu stören. Nach Abschluss der Arbeiten kann der Branch zurück in den Hauptbranch gemergt werden, um die Änderungen zu integrieren.
+
+
+
+* https://brntn.me/blog/git-branching-strategy-diagrams/[Git branching strategy diagrams^]
+
+
+// image::git-flow.png[]
+
+* Der main-Branch ist immer lauffähig
+* Die Entwicklung der Features findet auf feature Branches statt.
+
+image::github-flow.png[]
+
+
+* https://www.conventionalcommits.org/en/v1.0.0/[Conventional Commits^x]
+
+[IMPORTANT]
+.BEACHTE
+====
+* Vor jedem Arbeiten:
+** `git pull`
+** `git merge main`  (die Änderungen des main-branches werden in den aktuellen branch )
+* Nach jedem Arbeiten
+** git commit -m ""
+** git push origin feat/xxx
+====
+
+* Beurteilungkriterien:
+** Anzahl der Commits (Insights)
+** Anzahl der feature-Branches
+** Qualität der Commit-Messages
+*** Issue-Nummer
+*** Existenz eines Tasks (Issue) zu jedem Commit
+
+== 2024-11-12
+
+=== Aufbau des Projektrepos
+
+[plantuml,aufbau-projektrepo,svg]
+----
+@startsalt
+{
+{T
+ + gh-repo-root
+ ++ .github/workflows
+ ++ asciidocs
+ ++ protokolle
+ +++ 2024-11-12-mom.adoc
+ ++ javafx (project-root)
+}
+}
+@endsalt
+----
+
+[IMPORTANT]
+.BEACHTE
+====
+* Nur ein .git-Verzeichnis im Repo
+* .gitignore im repo-root
+====
+
+
+* Termin
+** 19.Nov.2024
+*** Datenmodell (plantuml-class-diagram)
+*** User-Stories (mind. 5)
+*** User-Stories und Datenmodell als revealjs-slides (siehe README.adoc)
+*** Projekt-Repo einrichten
+
+
+
+== 2024-11-19
+
+image::effektivitaet-effizienz.png[]
+
+
+=== Anforderungserhebung (Buch)
+
+==== Interview
+==== Beobachtung
+==== Fragebogen
+==== Dokumentenanalyse
+
+=== Pflichtenheft (Buch)
+
+image::v-modell.png[]
+
+* Übung: Für Projekte ein Pflichtenheft im asciidoc - Format erstellen
+
+
+=== Docker-Grundlagen
+
+=== *Was ist Docker?*
+
+* Eine Technologie , um eine Application und alle ihre Abhängigkeiten in einen einzelnen , leicht zu transportierenden Container zu packen.
+* Wird eine Applikation in einem Docker-Container gepackt, so ist sichergestellt , dass die Laufzeitumgebung unverändert bleibt, auch wenn der Container auf einem anderen Hostsystem läuft.
+
+=== *Wie funktioniert Docker?*
+
+image::image-2024-12-14-00-53-54-579.png[]
+
+* *Dockerfile*: Dies ist eine Textdatei, die Anweisungen enthält , um ein Docker-Image zu erstellen.(Kochrezept zum Erstellen des Images).
+* *docker build*:
+** Mit diesem Befehl wird aus dem Dockerfile ein Docker-Image erstellt. Dieses Image hat alle notwendigen Datien und Abhängigkeiten , um eine Anwendung auszuführen.
+[source,terminal]
+----
+docker build
+----
+* *Docker Registry*: Bibliothek oder Lager , wo Docker-Images gespeichert und verwaltet werden.
+
+* *docker pull*: Man holt sich mit diesem Befehl ein Docker-Image aus der Docker-Registry.(herunterladen oder pullen)
+
+[source,terminal]
+----
+docker pull
+----
+
+* *docker run*: Mit docker run wird aus dem Docker Image ein Docker Container gestartet.
+Ein Docker Container ist die laufende Instanz eines Docker Images.
+
+[source,terminal]
+----
+docker run
+----
+
+=== Leichtgewichtige Virtualisierung VS Schwergewichtige Virtualisierung
+|===
+|Leichtgewichtige Virtualisierung | Schwergewichtige Virtualisierung
+|Die beiden OS sind nicht unabhängig und müssen den selben Kernel benutzen.
+z.b Linux/Linux, verlangt aber weniger Ressourcenutzung.
+
+Beispiele: Docker,Podman
+| Die beiden OS sind völlig unabhängig und können verschieden sein.
+
+Beispiele: Virtual Box, vmWare
+
+|===
+
+
+image::image-2024-12-14-01-03-56-506.png[]
+
+=== Docker Registries
+* ist ein Remote-Repository zum Abspeichern von Docker Images
+* kann privat und öffentlich(public) sein
+
+=== Docker Image
+* Ein Docker Image enthält alle notwendigen Dateien, Einstellungen und Abhängigkeiten , um eine Anwendung auszuführen.
+
+
+=== Docker Container
+* Ein Docker Container ist die laufende Instanz von einem Docker Image und wird mit docker run erstellt
+
+=== Docker-Wiederholung
+
+==== Image
+==== Container
+==== Volume
+
+* Bits and Bytes, die man schreiben und lessen kann (-> File)
+
+* 2 Arten von Volumes:
+** bind mount
+** volume
+
+==== BuildContext
+
+* Der Docker Build Context ist der Satz von Dateien, die Docker benötigt, um ein Docker-Image zu erstellen. Wenn Sie den Befehl docker build ausführen, übergeben Sie Docker einen Pfad zu einem Verzeichnis als Build Context. Docker sendet dann den Inhalt dieses Verzeichnisses (rekursiv) an den Docker-Daemon.
+
+* Der Build Context enthält typischerweise die Dockerfile und alle Dateien, die in der Dockerfile referenziert werden, wie z.B. Quellcode, Konfigurationsdateien und Abhängigkeiten.
++
+.Beispiel:
+----
+docker build -t my-image:latest .
+----
+
+ * In diesem Beispiel ist das aktuelle Verzeichnis (.) der Build Context. Docker wird alle Dateien und Unterverzeichnisse im aktuellen Verzeichnis an den Docker-Daemon senden, um das Image zu erstellen.
+
+==== mount
+
+* ein Volume wird gemountet
+
+==== Registry
+
+==== Dockerfile
+
+==== port
+
+=== docker compose
+
+* One Service - one docker container
+
+== 2024-12-04
+
+=== Package-by-Feature
+
+.source: https://medium.com/sahibinden-technology/package-by-layer-vs-package-by-feature-7e89cde2ae3a[^]
+image::package-by-feature.png[]
+
+== 2024-12-17
+=== Beziehungen - Assoziation
+
+* Die Assoziation zwischen einem Akteur und einem Anwendungsfall wird durch eine einfache Linie dargestellt. Diese Linie symbolisiert die Interaktion, jedoch keine Datenflussrichtung.
+* Beispiel:
+** Ein Benutzer interagiert mit einem System, z. B. ein Kunde führt eine Bestellung durch.
+
+=== Use case
+
+* Ein Beispiel für einen Use Case:
+** Ein Kunde kauft ein Auto.
+* Grund:
+** Der Kunde benötigt ein Transportmittel, um Güter von A nach B zu befördern.
+
+=== includes vs extends
+
+* *extends*
+** Wird verwendet, wenn ein Anwendungsfall optional erweitert werden kann. Beispiel: 'Registrierung abschließen' kann optional 'Gutschein anwenden' erweitern.
+* *include*
+** Wird verwendet, wenn ein Anwendungsfall zwingend einen anderen Anwendungsfall beinhaltet, um korrekt zu funktionieren. Beispiel: 'Zahlung verarbeiten' beinhaltet zwingend 'Rechnungsdetails prüfen'.
+
+=== Zustandsmaschine
+* Eine Zustandsmaschine zeigt die verschiedenen Zustände eines Objekts und die möglichen Übergänge zwischen diesen Zuständen.
+* Ein Fußballspiel kann mehrere Zustände haben
+** In Vorbereitung - Startzustand, z.B. Mannschaften werden aufgestellt.
+** Ablauf - Das Spiel wird gespielt.
+** Abbruch - Das Spiel wird vorzeitig beendet.
+** Pause - Halbzeitpause
+** Abschluss - Endzustand, z.B.Spielende
+
+
+
+
+
+== 2025-01-14 Use-Cases
+
+* CLD bereits erläutert
+
+* Anwendungsfalldiagramme bis Folie 12
+
+== 2025-02-04
+
+* https://dev.to/ladoxer/why-i-stopped-using-plain-git-pull-and-why-you-should-too-2anl?utm_medium=erik.in&utm_source=bluesky[Why I Stopped Using Plain Git Pull (And Why You Should Too)^]
+
+=== Entwurfsentscheidungen
+
+==== Schritt 1: Erarbeiten des Zielsystems
+* Was ist mir wichtig?
+
+* Bsp: Auswahl einer Datenbank für Ermittlung eines Produkts zu einem gewissen EAN-Code
+
+** kostenfrei
+** Zugriff über API möglich
+** keine Zugriffsbeschränkungen (möglichst viele Anfragen pro Tag)
+** möglichst viele Produkte sollen enthalten sein
+** ev. Eintragen eigener (neuer) Produkte
+
+==== Schritt 2: Recherche für möglich Optionen (in unserm Bsp Datenbanken)
+
+* https://opengtindb.org/
+* https://www.ean-search.org/ean-database-api.html
+* ...
+
+==== Schritt 3: Bewertung der Optionen
+
+
+|===
+|Alternativen | ist kostenfrei | Zugriff über API |viele Produkte verfügbar | Entscheidung
+
+|opengtindb
+| ja
+| ja
+| hoffentlich
+| X
+
+|ean-search
+| nein
+| ja
+| k.A.
+|
+
+|===
+
+
+=== Paper CSS
+
+* https://www.getpapercss.com/
+
+
+== 2025-02-11
+
+image::disjunkt-ueberlappend.png[]
+
+
+== 2025-02-25 Docker
+
+=== nginx mit Docker
+
+* Aufgabenstellung: ein nginx-Image mittels Docker starten.
+
+** Wenn http://localhost:8080 dann "Hallo <Vorname> <Nachname>"
+
+----
+docker image ls
+
+docker pull nginx
+
+docker run --name nginx \
+           -v $PWD/www-data:/usr/share/nginx/html:ro \
+           -p 8080:80 \
+           -d nginx:1.27-alpine
+
+docker container stop nginx && docker container rm nginx
+----
+
+IMPORTANT: Nur der root user darf Ports unter 1000 verwenden, daher verwenden wir 8080
+
+
+=== Semantische Versionierung vs Kalendarische Versionierung
+
+* https://semver.org/
+
+* https://nehckl0.medium.com/semver-and-calver-2-popular-software-versioning-schemes-96be80efe36
+
+
 
 
